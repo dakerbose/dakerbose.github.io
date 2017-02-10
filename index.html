@@ -1,42 +1,213 @@
 ---
 layout: page
-description: "身体和灵魂，一个也不能落下！"
+title: "About"
+description: "Hey, this is dakerbose."
+header-img: "img/post-bg-rwd.jpg"
 ---
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
+<!-- Language Selector -->
+<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英文 English </option>
+</select> -->
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+<!-- Chinese Version -->
+<!-- Chinese Version -->
+<div class="zh post-container">
+
+    <!--copied from markdown -->
+    <blockquote><p>冰冻三尺 非一日之寒<br>
+    积土成山 非斯须之作</p></blockquote>
+
+    <p>Hey，我是<strong>胡嘉阳</strong>，一名中上985的机械转码生。</p>
+
+    <p>热爱智驾，希望成为一名行业大头兵</p>
+
+    <p>虚心学习、沉淀技术、打磨基础</p>
+
+    <h5>🎓 教育背景</h5>
+    <ul>
+        <li>
+            <strong>浙江大学</strong> | 机械工程 | 硕士 | 2023.9-至今
+            <br><small>专业排名：2/26</small>
+        </li>
+        <li>
+            <strong>哈尔滨工业大学(威海)</strong> | 智能车辆工程 | 学士 | 2019.9-2023.6
+            <br><small>专业排名：1/48，哈工大优秀毕业生</small>
+        </li>
+    </ul>
+
+    <h5>💻 专业技能</h5>
+    <div>
+        <h6>🔧 开发环境</h6>
+        <p><small>熟悉Linux/C/C++平台开发环境，熟悉Git常用操作，使用过JIRA和CI/CD流程进行智驾软件集成开发</small></p>
+        
+        <h6>📝 语言技能</h6>
+        <p><small>掌握C++基础语法，对面向对象、STL、内存管理和泛型编程等有一定理解，简单了解并发编程</small></p>
+        
+        <h6>🛠️ 其他工具</h6>
+        <p><small>熟悉ROS、VSOME/IP和ZeroMQ三种中间件的调用，了解GDB、CMake、Docker和QNX交叉编译</small></p>
+    </div>
+
+    <h5>📚 主要专业课程</h5>
+    <p><small>数据结构与算法设计、嵌入式操作系统、汽车构造、计算机组成原理、汽车理论、车载网络技术、自动驾驶环境感知技术、自动驾驶决策规划技术、智能驾驶平台设计开发、大学计算机基础、人工智能基础等</small></p>
+
+    <h5>🔬 研究生阶段</h5>
+    
+    <h6>📊 研究方向</h6>
+    <ul>
+        <li><strong>人形机器人感知技术</strong>：研究以双目立体视觉为代表的感知技术</li>
+        <li><strong>基础件工业数字化</strong>：协同参与以挖掘机为真机的系统仿真作业技术和数字化决策改造技术研发</li>
+        <li><strong>大模型应用技术</strong>：开发下一代面向工业数字底座的大模型应用技术，重点关注分布式推理系统的研制和网络通信</li>
+    </ul>
+
+    <h6>💼 实习经历</h6>
+    <ul>
+        <li>
+            <strong>深圳卓驭科技有限公司</strong> | 智驾行车应用层+中间件开发
+            <br><small><strong>量产项目：</strong>基于2025款一汽大众RHP2.0帕萨特/迈腾车型，城市公路/高速公路Platooning变道跟车功能开发</small>
+            <br><small>• 基于DjiAutosar架构，完成ACC、LCC、MOD、NOCD等行车场景的状态跳转和状态激活的车机C1平台化适配</small>
+            <br><small>• 基于城市/高速场景，设计新的Djimssg，并对齐HMI的adc-proto协议，基于gateway调整TDA4和车机HMI的消息链路</small>
+            <br><small>• 解析感知车辆Mot信息和地图信息，基于大众汉堡的相对风阻-车距专利和汽车动力学理论，设计跟车评价指标</small>
+            <br><small>• 基于C/C++设计状态机逻辑，注入Ecu_shell标定量，实现实车中虚拟前车场景模拟</small>
+            <br><small>• 基于观察者模式，在智驾中间层设计跨TDA4、SA8650等平台兼容的视觉和变道环境事件Proxy层</small>
+            <br><small>• 抓取实车txtlog日志调试状态跳转激活事件，设计层级锁优化时间同步和频繁错帧问题</small>
+        </li>
+        <li>
+            <strong>浙江大学高端装备研究院航空航天液压部</strong> | 基础工业数字化实习生
+            <br><small>• 构建docker，通过dockerfile安装ROS-Noetic、Protobuf、CMake等依赖项，同时使用Shell脚本编写第三方库源码安装和容器操作脚本，以实现项目构建流程的自动化，支持大规模工程设备的快速接入</small>
+            <br><small>• 基于Protobuf的编码和反射原理，并利用SFINAE机制重构ROS核心通信库，实现坐标数据、障碍物信息等多种ROS消息与Proto消息的转换</small>
+            <br><small>• 使用wireshark检测传输效率。以50-200MB的多组点云为基准进行回环测试，发现采用Protobuf发现压缩相较于rosmsg提升20%，序列化速度超过40%</small>
+        </li>
+        <li>
+            <strong>浙江大学高端装备研究院-高端机电系统及工业软件中心</strong> | 大模型应用开发实习生
+            <br><small>• 参与挖掘机数字化项目，负责挖掘机多机协同控制系统仿真平台的搭建和测试</small>
+            <br><small>• 基于ZeroMQ，引入工厂模式实现PUB/SUB、PUSH/PULL、REQ/REP六种混合通信策略，支持运行期切换</small>
+            <br><small>• 调用高可性的RPC框架，设计轻量序列化协议，采用长度前缀和紧凑存储的结构实现多参数打包/解包</small>
+            <br><small>• 统一底层多通信策略连接，并支持动态URL绑定，搭建channel连接池+work_id路由解决多实例并发干扰</small>
+            <br><small>• 针对长文本/多轮交互场景，设计基于Muduo和事件总线的异步推理调度，推理请求会动态分配到空闲任务</small>
+            <br><small>• 设计类rosmaster的单元管理模块，实现信道注册/释放和动态任务分发请求，并开发简易KV-SQL查询接口</small>
+        </li>
+    </ul>
+
+    <h6>🏆 竞赛获奖</h6>
+    <ul>
+        <li><strong>机械工业创新设计大赛</strong> 二等奖</li>
+        <li><strong>智能装备与机器人研究所</strong> 系二等奖</li>
+    </ul>
+
+    <h6>📄 学术成果</h6>
+    <div>
+        <p><strong>论文发表：</strong></p>
+        <ul>
+            <li><strong>Enhanced Motion Estimation for Autonomous Excavation: Accelerated Semantic Segmentation and ORB Features for Unstructured Environments</strong> (2024.11)
+                <br><small>SCI期刊，导师第一作者，学生第二作者。负责神经网络数据集制作、Unity数据集采集、神经网络推理性能优化、SLAM框架搭建</small>
+            </li>
+            <li><strong>Multi-Intelligent Excavator Collaboration Systems: An Overview</strong> (2025.08)
+                <br><small>SCI期刊，导师第一作者，学生第二作者。挖掘机多机协同控制文献综述</small>
+            </li>
+        </ul>
+
+        <p><strong>发明专利：</strong></p>
+        <ul>
+            <li><strong>一种多挖掘机的沟渠作业方法</strong> (CN202411828048.1, 2025.03)</li>
+            <li><strong>一种双台起重机协同吊起吊装物的方法、装置和控制器</strong> (CN202411941762.1, 2025.03)</li>
+            <li><strong>一种吊装作业方法和主从式协同吊装系统</strong> (CN202411941772.5, 2025.01)</li>
+            <li><strong>一种起重机吊臂吊钩协同控制方法、装置和设备</strong> (CN202411941775.9, 2025.01)</li>
+        </ul>
+    </div>
+
+    <h5>👨‍🎓 本科经历</h5>
+    
+    <h6>🏆 竞赛获奖</h6>
+    <ul>
+        <li><strong>全国大学生智能汽车竞赛</strong> 百度智慧交通组二等奖
+            <br><small>担任哈工大威海智能车竞赛软件组负责人，主要负责基于地图的自动驾驶神经网络训练部署、应用策略开发和逻辑闭环控制</small>
+        </li>
+        <li><strong>全国大学生工程训练综合能力竞赛</strong> 二等奖
+            <br><small>负责自动驾驶仿真平台51Simone软件应用C++接口开发和算法优化，包括纯追踪算法在目标跟踪的应用优化、滑模控制在多车编队中的设计</small>
+        </li>
+        <li><strong>山东省物理竞赛</strong> 一等奖</li>
+        <li><strong>美国大学生数学建模竞赛</strong> H奖</li>
+        <li><strong>广汽道路安全行</strong> 30强两项</li>
+    </ul>
+
+    <h6>🏅 奖金荣誉</h6>
+    <ul>
+        <li><strong>一汽解放领航奖学金</strong> 1次</li>
+        <li><strong>校一等人民奖学金</strong> 2次，<strong>二等人民奖学金</strong> 4次</li>
+    </ul>
+
+    <h6>🔬 项目经历</h6>
+    <ul>
+        <li><strong>科技立项</strong> 校二等奖，院一等奖</li>
+        <li><strong>大一年度项目计划</strong> 货车后防护设计院一等奖</li>
+        <li><strong>三下乡社会实践</strong> 校一等奖</li>
+    </ul>
+    <h5>🔗 社交链接</h5>
+    <ul>
+        <li><a href="/blog/">📝 我的博客</a> - 查看技术文章和学习笔记</li>
+        <li><a href="https://github.com/dakerbose" target="_blank">💻 GitHub</a></li>
+        <li><a href="https://space.bilibili.com/515944717?spm_id_from=333.337.0.0" target="_blank">📺 bilibili</a></li>
+    </ul>
+</div>
+<!-- English Version -->
+<!-- <div class="en post-container">
+    <blockquote><p>Yet another iOS Developer. <br>
+    Yet another Life-long Student.</p></blockquote>
+
+    <p>Hi, I am <strong>Baiying Qiu</strong>，you can call me <strong>BY</strong>. I am an iOS software engineer and currently working in Xiamen</p>
+
+    <p>This is my personal blog, through making Github Pages and Jekyll.My GitHub  👉 <a href="http://github.com/qiubaiying">Github·BY</a>.</p>
+    
+    <p>I am a sports enthusiast, I like fitness, running and boxing.</p>
+
+    <h5>Talks</h5>
+
+    <ul>
+    <li><a href="https://github.com">GitHub</a></li>
+    <li><a href="http://jekyll.com.cn/">jekyll</a></li>
+    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
+    <li><a href="https://qiubaiying.github.io">BY</a></li>
+    </ul>
+</div> -->
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+
+    // init
+    _render();
+</script>
