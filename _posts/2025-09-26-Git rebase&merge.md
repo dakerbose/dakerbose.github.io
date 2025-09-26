@@ -16,4 +16,4 @@ git rebase -i HEAD~2
 squash 
 交互式操作
 
-![](../img/rebase.png)
+![](/img/rebase.png)
